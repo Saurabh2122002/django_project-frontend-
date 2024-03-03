@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>List of persons</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <style>
+        .myTable {
+            width: 60%;
+            text-align: left;
+            background-color: lemonchiffon;
+            border-collapse: collapse;
+        }
+
+        .myTable th {
+            background-color: lightblue;
+            color: red;
+        }
+
+        .myTable td,
+        .myTable th {
+            padding: 10px;
+            border: 2px solid goldenrod;
+        }
+
+        hr {
+            color: #f00;
+            background-color: #f00;
+            height: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><center>WELCOME TO THE STUDENT DATABASE MANAGEMENT SYSTEM</center></h2>
+    <h3><center><font color="red">Developed Under the Guidance of Dr. Balaji Shetty Sir </font></h3></center>
+    <hr color="green">
+    <h4><center><b><i>SUMMARY EACH USER </i></b></center></h4>
+
+    <table border=1 color="red" align="center" class="myTable">
+        <tr>
+            <th>USER NAMES</th>
+            <th>Student_name</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Branch</th>
+            <th>Education</th>
+            <th>experience</th>
+        </tr>
+
+        <!-- Sample Data -->
+        {% for entry in stud12|slice(0, 10) %}
+        <tr>
+            <td>Students</td>
+            <td align="center">saurabh bandawar</td>
+            <td align="center">nanded</td>
+            <td align="center">Vishnupari</td>
+            <td align="center">information technology</td>
+            <td align="center">Third Year</td>
+            <td align="center">Fresher</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+</body>
+
+</html>
